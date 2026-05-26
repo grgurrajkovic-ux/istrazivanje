@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html lang="hr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Mamac</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="page">
+
+        <header class="top-nav">
+
+            <img
+                src="SLIKE/logo.svg"
+                alt="Mamac"
+                class="logo"
+            >
+
+            <button class="hamburger-btn">
+
+                <img
+                    src="SLIKE/hamburger.svg"
+                    alt="Menu"
+                >
+
+            </button>
+
+            <div class="dropdown-menu" aria-hidden="true">
+                <a class="dropdown-item" href="#o-problemu">O problemu</a>
+                <a class="dropdown-item" href="kako.html">Kako prepoznati phishing poruke</a>
+                <a class="dropdown-item" href="#sto-napraviti">Što napraviti sa phishing porukama</a>
+                <a class="dropdown-item" href="rijecnik.html">Mali riječnik</a>
+                <a class="dropdown-item" href="#anketa">Anketa</a>
+            </div>
+
+        </header>
+
+        <main>
+
+            <section class="problem-screen">
+
+                <h1>
+                    O PROBLEMU
+                </h1>
+
+                <p class="intro-text">
+
+                    Phishing poruke (SMS, e-mail,
+                    WhatsApp/Viber prevare) su u Hrvatskoj
+                    u posljednjih nekoliko godina postale
+                    znatno češće iz nekoliko konkretnih
+                    razloga, i to nije izoliran problem
+                    nego dio šireg europskog trenda.
+
+                </p>
+
+                <div class="stat-block">
+
+                    <div class="stat-number">
+                        2.000+
+                    </div>
+
+                    <p class="stat-label">
+                        Internetskih prijevara u RH
+                    </p>
+
+                </div>
+
+                <div class="stat-block">
+
+                    <div class="stat-number">
+                        5 milijuna
+                    </div>
+
+                    <p class="stat-label">
+                        Eura štete
+                    </p>
+
+                </div>
+
+                <div class="stat-block">
+
+                    <div class="stat-number">
+                        10 - 20%
+                    </div>
+
+                    <p class="stat-label">
+                        Stopa prevarenih žrtava raste
+                    </p>
+
+                </div>
+
+                <div class="info-grid">
+
+                    <div class="info-title">
+
+                        RAZLOZI
+
+                    </div>
+
+                    <div class="info-text">
+
+                        Niska razina digitalne
+                        pismenosti glavni je razlog
+                        porasta online prijevara
+                        u Hrvatskoj.
+
+                    </div>
+
+                </div>
+
+                <div class="info-grid">
+
+                    <div class="info-title">
+
+                        KAKO
+
+                    </div>
+
+                    <div class="info-text">
+
+                        Prevaranti pokušavaju
+                        navesti ljude da otkriju
+                        osobne podatke, podatke
+                        kartice, lozinke ili
+                        izvrše uplatu tako da ih
+                        usmjere na lažne
+                        poveznice.
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+        <nav class="floating-nav">
+
+            <button class="nav-arrow" aria-label="Prethodno">
+                <img src="SLIKE/strelica_lijevo.svg" alt="Prethodno">
+            </button>
+
+            <button class="nav-arrow" aria-label="Sljedeće">
+                <img src="SLIKE/strelica_desno.svg" alt="Sljedeće">
+            </button>
+
+        </nav>
+
+    </div>
+
+    <script>
+        (function(){
+            const btn = document.querySelector('.hamburger-btn');
+            const topNav = document.querySelector('.top-nav');
+            const dropdown = document.querySelector('.dropdown-menu');
+            if(!btn || !topNav || !dropdown) return;
+            btn.setAttribute('aria-expanded', 'false');
+            btn.addEventListener('click', function(e){
+                const open = topNav.classList.toggle('open');
+                btn.setAttribute('aria-expanded', String(open));
+                dropdown.setAttribute('aria-hidden', String(!open));
+            });
+            // close when clicking outside
+            document.addEventListener('click', function(e){
+                if(!topNav.classList.contains('open')) return;
+                if(topNav.contains(e.target)) return;
+                topNav.classList.remove('open');
+                btn.setAttribute('aria-expanded', 'false');
+                dropdown.setAttribute('aria-hidden', 'true');
+            });
+
+            // right floating arrow navigates to kako.html
+            const rightNav = document.querySelector('.floating-nav .nav-arrow:last-of-type');
+            if(rightNav) {
+                rightNav.addEventListener('click', function(e){
+                    // navigate to new screen
+                    window.location.href = 'kako.html';
+                });
+            }
+        })();
+    </script>
+
+</body>
+
+</html>

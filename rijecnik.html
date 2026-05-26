@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mali dnevnik</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="page">
+
+    <!-- OSTAVLJENO IZ STAROG KODA -->
+    <header class="top-nav">
+
+        <img src="SLIKE/logo.svg"
+             alt="Mamac"
+             class="logo">
+
+        <button class="hamburger-btn">
+            <img src="SLIKE/hamburger.svg"
+                 alt="Menu">
+        </button>
+
+        <div class="dropdown-menu" aria-hidden="true">
+            <a class="dropdown-item" href="index.html">O problemu</a>
+            <a class="dropdown-item" href="kako.html">Kako prepoznati phishing poruke</a>
+            <a class="dropdown-item" href="sto-napraviti.html">Što napraviti sa phishing porukama</a>
+            <a class="dropdown-item" href="rijecnik.html">Mali riječnik</a>
+            <a class="dropdown-item" href="anketa.html">Anketa</a>
+        </div>
+
+    </header>
+
+    <main>
+
+        <section class="problem-screen">
+
+            <h1>MALI DNEVNIK</h1>
+
+            <!-- 12 dropdown panela -->
+
+            <div class="panel">
+                <div class="panel-toggle">
+                    <div class="panel-label">Phishing</div>
+                    <img class="panel-arrow"
+                         src="SLIKE/zatvoreno.svg"
+                         alt="">
+                </div>
+
+                <div class="panel-content" hidden>
+                            <div class="panel-inner">Phishing, odnosno mrežna krađa identiteta je kriminalna aktivnost kojom se zlonamjerni korisnici služe kako bi prevarili primatelja i naveli ga na dijeljenje osobnih, financijskih ili sigurnosnih podataka i na taj način ostvarili nezakonitu financijsku korist.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           </div>
+                        </div>
+                </div>
+            </div>
+
+            <div class="panel">
+                        <div class="panel-toggle" role="button" tabindex="0" aria-expanded="false">
+                            <div class="panel-label">Novi prijatelj</div>
+                            <img class="panel-arrow" src="SLIKE/zatvoreno.svg" alt="otvori" aria-hidden="true">
+                        </div>
+                        <div class="panel-content" hidden>
+                            <div class="panel-inner">“Bok, je li ovo Alex? Oprosti, pogrešan broj — ali djeluješ simpatično. Čime se baviš?”</div>
+                        </div>
+                    </div>
+
+        </section>
+
+    </main>
+
+    <!-- OSTAVLJENO IZ STAROG KODA -->
+    <nav class="floating-nav">
+
+        <button class="nav-arrow">
+            <img src="SLIKE/strelica_lijevo.svg"
+                 alt="Prethodno">
+        </button>
+
+        <button class="nav-arrow">
+            <img src="SLIKE/strelica_desno.svg"
+                 alt="Sljedeće">
+        </button>
+
+    </nav>
+
+</div>
+
+<script>
+(function(){
+
+    /* hamburger menu */
+    const btn = document.querySelector('.hamburger-btn');
+    const topNav = document.querySelector('.top-nav');
+    const dropdown = document.querySelector('.dropdown-menu');
+
+    btn.addEventListener('click', function(){
+        const open = topNav.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open);
+        dropdown.setAttribute('aria-hidden', !open);
+    });
+
+    /* panel dropdowns */
+    const panels = document.querySelectorAll('.panel');
+
+    panels.forEach(function(panel){
+
+        const toggle = panel.querySelector('.panel-toggle');
+        const content = panel.querySelector('.panel-content');
+        const arrow = panel.querySelector('.panel-arrow');
+
+        function setOpen(open){
+
+            if(open){
+                content.hidden = false;
+                arrow.src = 'SLIKE/otvoreno.svg';
+            } else {
+                content.hidden = true;
+                arrow.src = 'SLIKE/zatvoreno.svg';
+            }
+
+            toggle.setAttribute('aria-expanded', open);
+        }
+
+        toggle.addEventListener('click', function(){
+            setOpen(
+                toggle.getAttribute('aria-expanded') !== 'true'
+            );
+        });
+
+        setOpen(false);
+
+    });
+
+})();
+</script>
+
+</body>
+</html>

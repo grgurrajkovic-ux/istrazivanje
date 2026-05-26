@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html lang="hr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Kako prepoznati phishing poruke</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="page">
+
+        <header class="top-nav">
+
+            <img
+                src="SLIKE/logo.svg"
+                alt="Mamac"
+                class="logo"
+            >
+
+            <button class="hamburger-btn">
+
+                <img
+                    src="SLIKE/hamburger.svg"
+                    alt="Menu"
+                >
+
+            </button>
+
+            <div class="dropdown-menu" aria-hidden="true">
+                <a class="dropdown-item" href="index.html">O problemu</a>
+                <a class="dropdown-item" href="kako.html">Kako prepoznati phishing poruke</a>
+                <a class="dropdown-item" href="sto-napraviti.html">Što napraviti sa phishing porukama</a>
+                <a class="dropdown-item" href="rijecnik.html">Mali riječnik</a>
+                <a class="dropdown-item" href="anketa.html">Anketa</a>
+            </div>
+
+        </header>
+
+        <main>
+
+            <section class="problem-screen">
+
+                <h1>
+                    KAKO PREPOZNATI PHISHING PORUKE
+                </h1>
+
+                <p class="intro-text">
+                    Prevaranti pokušavaju navesti ljude da otkriju osobne podatke, podatke kartice, lozinke ili izvrše uplatu tako da ih usmjere na lažne poveznice. Takve poruke često izgledaju kao da dolaze od banke, pošte ili državnih institucija. Klikom na poveznicu dolazi se na lažnu web-stranicu koja izgleda legitimno. 
+                </p>
+
+                <p class="intro-text">
+                 Ova metoda prijevare je popularna i učinkovita jer web-stranica stvara osjećaj sigurnosti, za razliku od direktnog upita prevaranta za vaše osobne podatke. 
+                </p>
+
+                <div class="info-grid">
+
+                    <div class="info-title">
+
+                        ZNAKOVI
+
+                    </div>
+
+                    <div class="info-text">
+
+                        Kako biste prepoznali takve poruke, postoje jasni znakovi po kojima ih možete prepoznati.
+
+                    </div>
+
+                </div>
+
+                <!-- Slideshow: small title + text, arrows below corners -->
+                <div class="slideshow">
+                    <div class="slide" id="slide">
+                        <div class="info-grid">
+                            <div class="info-title" id="slide-title">1)</div>
+                            <div class="info-text" id="slide-text">Dolaze s nepoznatih ili inozemnih brojeva.</div>
+                        </div>
+                    </div>
+
+                    <button class="slide-arrow left" aria-label="Prethodni slide">
+                        <img src="SLIKE/strelica_lijevo.svg" alt="Prethodno">
+                    </button>
+
+                    <button class="slide-arrow right" aria-label="Sljedeći slide">
+                        <img src="SLIKE/strelica_desno.svg" alt="Sljedeće">
+                    </button>
+                </div>
+
+                <h2 class="important-title">VAŽNO</h2>
+                
+                <div class="bracket-toggle" role="button" tabindex="0" aria-pressed="false">
+                    <img class="bracket left" src="SLIKE/zagrada_lijevo.svg" alt="(" aria-hidden="true">
+                    <div class="bracket-text">Phishing poruke često dolaze s stranih brojeva (+44, +49, +1)</div>
+                    <img class="bracket right" src="SLIKE/zagrada_desno.svg" alt=")" aria-hidden="true">
+                </div>
+
+                <!-- Additional bracket toggles (placeholders) -->
+                <div class="bracket-toggle" role="button" tabindex="0" aria-pressed="false">
+                    <img class="bracket left" src="SLIKE/zagrada_lijevo.svg" alt="(" aria-hidden="true">
+                    <div class="bracket-text">Banke i institucije ne stvaraju paniku niti traže hitne akcije putem SMS-a.</div>
+                    <img class="bracket right" src="SLIKE/zagrada_desno.svg" alt=")" aria-hidden="true">
+                </div>
+
+                <div class="bracket-toggle" role="button" tabindex="0" aria-pressed="false">
+                    <img class="bracket left" src="SLIKE/zagrada_lijevo.svg" alt="(" aria-hidden="true">
+                    <div class="bracket-text">Umjesto službene domene 
+(npr. @banka.hr), dolazi nešto poput @gmail.com ili čudne varijacije.</div>
+                    <img class="bracket right" src="SLIKE/zagrada_desno.svg" alt=")" aria-hidden="true">
+                </div>
+
+                <div class="bracket-toggle" role="button" tabindex="0" aria-pressed="false">
+                    <img class="bracket left" src="SLIKE/zagrada_lijevo.svg" alt="(" aria-hidden="true">
+                    <div class="bracket-text">Linkovi uvijek izgledaju čudno. Zamjene slova 
+(npr. banka-secure.xyz)</div>
+                    <img class="bracket right" src="SLIKE/zagrada_desno.svg" alt=")" aria-hidden="true">
+                </div>
+
+                    <!-- Subheading like ZNAKOVI -->
+                    <div class="info-grid">
+                        <div class="info-title">PRIMJERI<br>PORUKA</div>
+                    </div>
+
+                    <!-- Custom dropdown panel -->
+                    <div class="panel">
+                        <div class="panel-toggle" role="button" tabindex="0" aria-expanded="false">
+                            <div class="panel-label">Dostava/pošta</div>
+                            <img class="panel-arrow" src="SLIKE/zatvoreno.svg" alt="otvori" aria-hidden="true">
+                        </div>
+                        <div class="panel-content" hidden>
+                            <div class="panel-inner">Vaš paket čeka dostavu zbog neplaćene poštarine. Kako biste izbjegli povrat pošiljke, ažurirajte svoje podatke ovdje: [sumnjiva poveznica]”</div>
+                        </div>
+                    </div>
+
+                    <!-- Additional panels (8) -->
+                    <div class="panel">
+                        <div class="panel-toggle" role="button" tabindex="0" aria-expanded="false">
+                            <div class="panel-label">Novi prijatelj</div>
+                            <img class="panel-arrow" src="SLIKE/zatvoreno.svg" alt="otvori" aria-hidden="true">
+                        </div>
+                        <div class="panel-content" hidden>
+                            <div class="panel-inner">“Bok, je li ovo Alex? Oprosti, pogrešan broj — ali djeluješ simpatično. Čime se baviš?”</div>
+                        </div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="panel-toggle" role="button" tabindex="0" aria-expanded="false">
+                            <div class="panel-label">Ponuda za posao</div>
+                            <img class="panel-arrow" src="SLIKE/zatvoreno.svg" alt="otvori" aria-hidden="true">
+                        </div>
+                        <div class="panel-content" hidden>
+                            <div class="panel-inner">Odabrani ste za posao rada na daljinu. Zarađujte dnevni prihod ocjenjivanjem hotela. Počnite već danas!” [sumnjiva poveznica]</div>
+                        </div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="panel-toggle" role="button" tabindex="0" aria-expanded="false">
+                            <div class="panel-label">Banka</div>
+                            <img class="panel-arrow" src="SLIKE/zatvoreno.svg" alt="otvori" aria-hidden="true">
+                        </div>
+                        <div class="panel-content" hidden>
+                            <div class="panel-inner">Otkrivena je neuobičajena aktivnost na vašem računu. Potvrdite svoj račun odmah kako biste spriječili njegovo blokiranje: [sumnjiva poveznica]”</div>
+                        </div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="panel-toggle" role="button" tabindex="0" aria-expanded="false">
+                            <div class="panel-label">Obitelj</div>
+                            <img class="panel-arrow" src="SLIKE/zatvoreno.svg" alt="otvori" aria-hidden="true">
+                        </div>
+                        <div class="panel-content" hidden>
+                            <div class="panel-inner">“Bok bako, ovdje tvoj unuk. Imao sam prometnu nesreću i trebam novac za bolnicu. Molim te pošalji 500€ na ovaj CashApp: [CashApp ID]”</div>
+                        </div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="panel-toggle" role="button" tabindex="0" aria-expanded="false">
+                            <div class="panel-label">Neplaćeni računi</div>
+                            <img class="panel-arrow" src="SLIKE/zatvoreno.svg" alt="otvori" aria-hidden="true">
+                        </div>
+                        <div class="panel-content" hidden>
+                            <div class="panel-inner">“Vaša usluga električne energije bit će isključena zbog neplaćanja. Platite odmah: [lažna poveznica za plaćanje]”</div>
+                        </div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="panel-toggle" role="button" tabindex="0" aria-expanded="false">
+                            <div class="panel-label">Nagrada</div>
+                            <img class="panel-arrow" src="SLIKE/zatvoreno.svg" alt="otvori" aria-hidden="true">
+                        </div>
+                        <div class="panel-content" hidden>
+                            <div class="panel-inner">“Čestitamo! Osvojili ste Amazon poklon karticu u iznosu od 100€. Kliknite ovdje kako biste preuzeli svoju nagradu: [phishing poveznica]”</div>
+                        </div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="panel-toggle" role="button" tabindex="0" aria-expanded="false">
+                            <div class="panel-label">Povrat novaca</div>
+                            <img class="panel-arrow" src="SLIKE/zatvoreno.svg" alt="otvori" aria-hidden="true">
+                        </div>
+                        <div class="panel-content" hidden>
+                            <div class="panel-inner">“Preplatili ste 50€ za nedavnu transakciju. Kliknite ovdje kako biste obradili povrat novca: [lažna poveznica za plaćanje]”</div>
+                        </div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="panel-toggle" role="button" tabindex="0" aria-expanded="false">
+                            <div class="panel-label">Policija</div>
+                            <img class="panel-arrow" src="SLIKE/zatvoreno.svg" alt="otvori" aria-hidden="true">
+                        </div>
+                        <div class="panel-content" hidden>
+                            <div class="panel-inner">“Kazna za prekorečenje brzine nije plačena. Kako nebi došlo do sudskih mjera platite račin od 100€[lažna poveznica za plaćanje]”</div>
+                        </div>
+                    </div>
+
+            </section>
+
+        </main>
+
+        <nav class="floating-nav">
+
+            <button class="nav-arrow" aria-label="Prethodno">
+                <img src="SLIKE/strelica_lijevo.svg" alt="Prethodno">
+            </button>
+
+            <button class="nav-arrow" aria-label="Sljedeće">
+                <img src="SLIKE/strelica_desno.svg" alt="Sljedeće">
+            </button>
+
+        </nav>
+
+    </div>
+
+    <script>
+        (function(){
+            const btn = document.querySelector('.hamburger-btn');
+            const topNav = document.querySelector('.top-nav');
+            const dropdown = document.querySelector('.dropdown-menu');
+            if(!btn || !topNav || !dropdown) return;
+            btn.setAttribute('aria-expanded', 'false');
+            btn.addEventListener('click', function(e){
+                const open = topNav.classList.toggle('open');
+                btn.setAttribute('aria-expanded', String(open));
+                dropdown.setAttribute('aria-hidden', String(!open));
+            });
+            document.addEventListener('click', function(e){
+                if(!topNav.classList.contains('open')) return;
+                if(topNav.contains(e.target)) return;
+                topNav.classList.remove('open');
+                btn.setAttribute('aria-expanded', 'false');
+                dropdown.setAttribute('aria-hidden', 'true');
+            });
+
+            // left arrow goes back to index.html
+            const leftNav = document.querySelector('.floating-nav .nav-arrow:first-of-type');
+            if(leftNav) {
+                leftNav.addEventListener('click', function(e){
+                    window.location.href = 'index.html';
+                });
+            }
+
+            // Slideshow logic
+            const slides = [
+                {title: '1)', text: 'Dolaze s nepoznatih ili inozemnih brojeva.'},
+                {title: '2)', text: 'Sadrže prijeteći ton ili stvaraju osjećaj hitnosti.'},
+                {title: '3)', text: 'Traže unos osobnih podataka ili plaćanje.'},
+                {title: '4)', text: 'Sadrže sumnjive poveznice i email adrese pošiljatelja.'},
+                {title: '5)', text: 'Dolaze s nepoznatih ili inozemnih brojeva.'},
+                {title: '6)', text: 'Često sadrže gramatičke i pravopisne pogreške'},
+                {title: '7)', text: 'Potpuno irelevantne i poslane “od nikud.”'}
+            ];
+
+            let current = 0;
+            const titleEl = document.getElementById('slide-title');
+            const textEl = document.getElementById('slide-text');
+            const leftBtn = document.querySelector('.slide-arrow.left');
+            const rightBtn = document.querySelector('.slide-arrow.right');
+
+            function render(i){
+                const s = slides[i];
+                if(!s) return;
+                titleEl.textContent = s.title;
+                textEl.textContent = s.text;
+            }
+
+            if(leftBtn) leftBtn.addEventListener('click', ()=>{
+                current = (current - 1 + slides.length) % slides.length;
+                render(current);
+            });
+            if(rightBtn) rightBtn.addEventListener('click', ()=>{
+                current = (current + 1) % slides.length;
+                render(current);
+            });
+
+            // initial render
+            render(current);
+
+            // Bracket toggle logic for all toggles
+            const bracketToggles = document.querySelectorAll('.bracket-toggle');
+            bracketToggles.forEach(function(bt){
+                function toggleBrackets(){
+                    const active = bt.classList.toggle('active');
+                    bt.setAttribute('aria-pressed', String(active));
+                }
+                bt.addEventListener('click', toggleBrackets);
+                bt.addEventListener('keydown', function(e){
+                    if(e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleBrackets(); }
+                });
+            });
+
+            // Panel dropdown logic
+            const panels = document.querySelectorAll('.panel');
+            panels.forEach(function(panel){
+                const toggle = panel.querySelector('.panel-toggle');
+                const content = panel.querySelector('.panel-content');
+                const arrow = panel.querySelector('.panel-arrow');
+                if(!toggle) return;
+                function setOpen(open){
+                    toggle.setAttribute('aria-expanded', String(open));
+                    if(open){
+                        content.hidden = false;
+                        panel.classList.add('open');
+                        panel.classList.remove('collapsed');
+                        if(arrow) arrow.src = 'SLIKE/otvoreno.svg';
+                    } else {
+                        content.hidden = true;
+                        panel.classList.remove('open');
+                        panel.classList.add('collapsed');
+                        if(arrow) arrow.src = 'SLIKE/zatvoreno.svg';
+                    }
+                }
+                toggle.addEventListener('click', function(){ setOpen(! (toggle.getAttribute('aria-expanded') === 'true') ); });
+                toggle.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setOpen(! (toggle.getAttribute('aria-expanded') === 'true') ); } });
+                // initialize collapsed
+                setOpen(false);
+            });
+        })();
+    </script>
+
+</body>
+
+</html>

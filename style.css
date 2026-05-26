@@ -1,0 +1,469 @@
+/* FONTOVI */
+
+@font-face {
+    font-family: "Humane";
+    src: url("Font/Humane-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto Mono";
+    src: url("Font/RobotoMono-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto Mono";
+    src: url("Font/RobotoMono-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* RESET */
+
+* {
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+/* BODY */
+
+body {
+
+    background: white;
+
+    color: black;
+
+    font-family: "Roboto Mono", monospace;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+/* WRAPPER */
+
+.page {
+
+    width: 100%;
+
+    max-width: 428px;
+
+    min-height: 100vh;
+}
+
+/* NAVIGATION */
+
+.top-nav {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding-top: 24px;
+
+    padding-left: 16px;
+
+    padding-right: 16px;
+}
+
+/* Center logo visually while keeping hamburger on the right */
+.top-nav {
+    position: relative;
+}
+
+.top-nav .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+/* Dropdown menu from header */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    padding-top: 8px; /* distance from top edge */
+    padding-left: 16px; /* distance from left edge */
+    background: white;
+    z-index: 50;
+}
+
+.top-nav.open .dropdown-menu {
+    display: flex;
+}
+
+.dropdown-item {
+    display: block;
+    width: calc(100% - 32px);
+    padding: 8px 16px;
+    border: 1px solid #000; /* stroke around each section */
+    text-decoration: none;
+    color: #000;
+    font-family: "Roboto Mono", monospace;
+    font-weight: 700; /* Roboto Mono Bold */
+    font-size: 16pt;
+    text-align: left;
+    background: transparent;
+}
+
+.dropdown-item:active,
+.dropdown-item:focus,
+.dropdown-item:hover {
+    background: rgba(0,0,0,0.03);
+}
+
+.logo {
+
+    height: 32px;
+}
+
+.hamburger-btn {
+
+    background: none;
+
+    border: none;
+
+    cursor: pointer;
+}
+
+.hamburger-btn img {
+
+    width: 24px;
+
+    display: block;
+}
+
+/* CONTENT */
+
+main {
+
+    padding-left: 16px;
+
+    padding-right: 16px;
+
+    padding-bottom: 140px;
+}
+
+/* H1 */
+
+h1 {
+
+    margin-top: 40px;
+
+    font-family: "Humane";
+
+    font-size: 122px;
+
+    line-height: 0.82;
+
+    text-align: left;
+}
+
+/* UVODNI TEKST */
+
+.intro-text {
+
+    margin-top: 24px;
+
+    font-size: 16px;
+
+    line-height: 1.5;
+}
+
+/* STATISTIKE */
+
+.stat-block {
+
+    margin-top: 56px;
+}
+
+.stat-number {
+
+    font-family: "Humane";
+
+    font-size: 128px;
+
+    line-height: 0.82;
+}
+
+.stat-label {
+
+    font-size: 16px;
+
+    margin-top: 4px;
+}
+
+/* GRID */
+
+.info-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 16px;
+
+    margin-top: 56px;
+}
+
+.info-title {
+
+    grid-column: 1;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    text-align: left;
+}
+
+.info-text {
+
+    grid-column: 2 / 5;
+
+    font-size: 16px;
+
+    line-height: 1.5;
+
+    text-align: left;
+}
+
+/* FLOATING NAV */
+
+.floating-nav {
+
+    position: fixed;
+
+    left: 50%;
+
+    bottom: 24px;
+
+    transform: translateX(-50%);
+
+    width: 104px; /* adjusted to fit two 16px arrows + paddings + gap */
+
+    height: 64px;
+
+    background: black;
+
+    border-radius: 999px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 20px; /* arrow distance from left edge */
+    padding-right: 20px; /* arrow distance from right edge */
+    gap: 32px; /* distance between arrows */
+}
+
+.nav-arrow {
+
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-arrow img {
+    width: 16px;
+    height: 16px;
+    display: block;
+}
+
+/* Make floating nav arrows white by inverting the SVG (keeps slideshow arrows black) */
+.floating-nav .nav-arrow img {
+    filter: invert(1);
+}
+
+/* DESKTOP */
+
+@media (min-width: 768px) {
+
+    .page {
+
+        max-width: 428px;
+    }
+}
+
+/* Slideshow styles */
+.slideshow {
+    margin-top: 24px;
+    position: relative;
+    padding-bottom: 28px; /* space for arrows below */
+}
+
+.slideshow .slide {
+    padding: 8px 12px 12px 12px;
+    background: black;
+}
+
+/* white text inside slideshow */
+.slideshow .info-title,
+.slideshow .info-text {
+    color: #fff;
+}
+
+/* reduce the large top margin applied by .info-grid for slides */
+.slideshow .info-grid {
+    margin-top: 8px;
+    gap: 8px;
+}
+
+/* Panel / dropdown styles */
+.panel {
+    margin-top: 16px;
+}
+
+.panel-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px; /* left/right 16px, top/bottom 8px */
+    border: 1px solid #000; /* show top/left/right and bottom when collapsed */
+    background: transparent;
+    cursor: pointer;
+}
+
+.panel-label {
+    flex: 1;
+    text-align: left; /* left side text: left-aligned */
+    font-family: "Roboto Mono", monospace;
+    font-weight: 700;
+}
+
+.panel-arrow {
+    width: 20px;
+    height: 20px; /* enforce same square size for both states */
+    max-width: 20px;
+    display: block;
+    margin-left: 12px;
+}
+
+.panel-content {
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000; /* outermost bottom line when opened */
+    border-top: none;
+    padding: 8px 16px 8px 101px; /* top/bottom 8px, left 101px, right 16px */
+    background: white;
+}
+
+.panel-content .panel-inner { margin-bottom: 8px; }
+
+/* open state: remove the toggle's bottom line and show content with outer borders */
+.panel.open .panel-toggle { border-bottom: none; }
+.panel.open .panel-content { display: block; }
+
+
+.slide-arrow {
+    border: none;
+    background: none;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    bottom: -12px; /* moved closer to text */
+}
+
+.slide-arrow img {
+    width: 16px;
+    height: 16px;
+    display: block;
+}
+
+.slide-arrow.left {
+    left: 8px; /* closer to left edge/text */
+}
+
+.slide-arrow.right {
+    right: 8px; /* closer to right edge/text */
+}
+
+/* Important heading under slideshow */
+.important-title {
+    font-family: "Humane";
+    font-size: 122px;
+    line-height: 0.82;
+    text-align: center;
+    margin-top: 16px;
+    margin-bottom: 24px;
+}
+
+/* Bracket toggle (center text with left/right bracket SVGs) */
+.bracket-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 24px 0; /* reduced vertical space */
+    min-height: 96px; /* ensure room for tall bracket SVGs without being too large */
+    position: relative;
+    cursor: pointer;
+    background: #fff; /* hide underlying grey */
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+
+.bracket-toggle .bracket {
+    width: 32px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: left 360ms cubic-bezier(.22,.9,.35,1), transform 360ms ease, opacity 300ms ease;
+}
+
+.bracket-toggle .bracket-text {
+    font-family: "Roboto Mono", monospace;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    color: #000;
+    transition: opacity 250ms ease, transform 300ms ease;
+}
+
+/* initial offset: brackets away from center */
+.bracket-toggle .bracket.left { left: 8px; }
+.bracket-toggle .bracket.right { left: calc(100% - 40px); }
+
+/* active: position brackets near center with 16px gap between them */
+.bracket-toggle.active .bracket.left {
+    left: calc(50% - 40px);
+    transform: translateY(-50%);
+}
+.bracket-toggle.active .bracket.right {
+    left: calc(50% + 8px);
+    transform: translateY(-50%);
+}
+.bracket-toggle.active .bracket-text { opacity: 0; transform: scaleY(0.95); }
+
+/* When text hidden, ensure brackets stack visually */
+.bracket-toggle .bracket { z-index: 2; }
+.bracket-toggle .bracket-text { z-index: 1; }
+
+/* keyboard focus styles */
+.bracket-toggle:focus { outline: 2px solid transparent; }
